@@ -1,0 +1,8 @@
+<h1>News List</h1>
+<table width="100%">
+    <tr ng-repeat='news in news_list track by news.id'>
+        <td>
+            <a href="#/detail/{{news.id}}"><h3>{{news.title}}</h3></a>
+        </td>
+    </tr>
+</table>

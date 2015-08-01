@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "f7cb8658568f8715ea7de239963e721e",
+    "packages": [
+        {
+            "name": "php-gcm/php-gcm",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lkorth/php-gcm.git",
+                "reference": "827d621c97d06ebc993bea11f7d6c72123f4ddac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lkorth/php-gcm/zipball/827d621c97d06ebc993bea11f7d6c72123f4ddac",
+                "reference": "827d621c97d06ebc993bea11f7d6c72123f4ddac",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.29"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHP_GCM": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Korth",
+                    "email": "luke@lukekorth.com"
+                }
+            ],
+            "description": "A PHP library for sending GCM messages",
+            "homepage": "https://github.com/lkorth/php-gcm",
+            "keywords": [
+                "android",
+                "gcm",
+                "library",
+                "php"
+            ],
+            "time": "2015-03-10 15:16:41"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
