@@ -11,6 +11,25 @@
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Canvas2ImagePlugin\"><param name=\"android-package\" value=\"org.devgeeks.Canvas2ImagePlugin.Canvas2ImagePlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -19,6 +38,9 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.wilianto.notepad"
+        },
+        "org.devgeeks.Canvas2ImagePlugin": {
             "PACKAGE_NAME": "com.wilianto.notepad"
         }
     },

@@ -93,16 +93,21 @@ function tool_eraser(){
 
 //save note to file
 function save(){
-
-}
-
-//open saved notes
-function open(){
-
+    window.canvas2ImagePlugin.saveImageDataToLibrary(function(msg){
+        console.log(msg);
+        alert("Data saved!");
+    }, function(err){
+        alert(err);
+    }, document.getElementById("canvas"));
 }
 
 function new_canvas(){
     if(confirm("Are you sure want to clear the canvas?")){
         context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     }
+}
+
+function onFailed(error){
+    console.log(error);
+    alert(error.code);
 }

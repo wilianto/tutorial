@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <meta charset="utf-8">
         <title>Notepad</title>
         <link rel="stylesheet" href="assets/css/font-awesome.min.css">
@@ -8,12 +12,14 @@
     </head>
     <body onload="init()">
         <div class="toolbar">
-            <button type="button" name="button" id="clear" onclick="new_canvas()"><span class="fa fa-file-o"></span></button> | 
+            <button type="button" name="button" id="clear" onclick="save()"><span class="fa fa-save"></span></button>
+            <button type="button" name="button" id="clear" onclick="new_canvas()"><span class="fa fa-file-o"></span></button> |
             <button type="button" name="button" id="pencil" onclick="select_pencil()"><span class="fa fa-pencil"></span></button>
             <button type="button" name="button" id="eraser" onclick="select_eraser()"><span class="fa fa-eraser"></span></button>
         </div>
         <canvas id="canvas" style="background: url('assets/img/paper-bg.jpg')"></canvas>
 
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="assets/js/index.js"></script>
         <script type="text/javascript" src="assets/js/notepad.js"></script>
     </body>
