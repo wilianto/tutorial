@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Notepad</title>
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/notepad.css">
+    </head>
+    <body onload="init()">
+        <div class="toolbar">
+            <button type="button" name="button" id="clear" onclick="new_canvas()"><span class="fa fa-file-o"></span></button> | 
+            <button type="button" name="button" id="pencil" onclick="select_pencil()"><span class="fa fa-pencil"></span></button>
+            <button type="button" name="button" id="eraser" onclick="select_eraser()"><span class="fa fa-eraser"></span></button>
+        </div>
+        <canvas id="canvas" style="background: url('assets/img/paper-bg.jpg')"></canvas>
+
+        <script type="text/javascript" src="assets/js/index.js"></script>
+        <script type="text/javascript" src="assets/js/notepad.js"></script>
+    </body>
+</html>
