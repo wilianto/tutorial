@@ -19,7 +19,7 @@ function init(){
     select_pencil();
 }
 
-//event listerner for canvas
+//event listener callback for canvas
 function ev_canvas(e){
     if(tool != null){
         //call listener
@@ -27,6 +27,23 @@ function ev_canvas(e){
         if(func){
             func(e);
         }
+    }
+}
+
+//save note to file
+function save(){
+    window.canvas2ImagePlugin.saveImageDataToLibrary(function(msg){
+        console.log(msg);
+        new_canvas();
+        alert("Data saved!");
+    }, function(err){
+        alert(err);
+    }, canvas);
+}
+
+function new_canvas(){
+    if(confirm("Are you sure want to clear the canvas?")){
+        context.clearRect(0, 0, window.innerWidth, window.innerHeight);
     }
 }
 
@@ -89,26 +106,4 @@ function tool_eraser(){
         context.closePath();
         this.selected = false;
     };
-}
-
-//save note to file
-function save(){
-    window.canvas2ImagePlugin.saveImageDataToLibrary(function(msg){
-        console.log(msg);
-        new_canvas();
-        alert("Data saved!");
-    }, function(err){
-        alert(err);
-    }, canvas);
-}
-
-function new_canvas(){
-    if(confirm("Are you sure want to clear the canvas?")){
-        context.clearRect(0, 0, window.innerWidth, window.innerHeight);
-    }
-}
-
-function onFailed(error){
-    console.log(error);
-    alert(error.code);
 }

@@ -95,10 +95,11 @@ function tool_eraser(){
 function save(){
     window.canvas2ImagePlugin.saveImageDataToLibrary(function(msg){
         console.log(msg);
+        new_canvas();
         alert("Data saved!");
     }, function(err){
         alert(err);
-    }, document.getElementById("canvas"));
+    }, canvas);
 }
 
 function new_canvas(){
