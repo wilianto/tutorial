@@ -1,0 +1,22 @@
+button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+textarea{
+    width: 100%;
+}
+
+.loader{
+    height: 30px;
+    width: 100%;
+    border: 1px solid #333;
+}
+
+.loader-inner{
+    width: 0%;
+    height: 100%;
+    background: #FF0000;
+}
